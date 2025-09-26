@@ -219,7 +219,7 @@ const Navbar = () => {
             </a>
 
             <a
-              href="/our-Values"
+              href="/"
               className="block px-3 py-2 rounded hover:bg-[#009739]"
             >
               Values
