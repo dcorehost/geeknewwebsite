@@ -1,60 +1,104 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { useNavigate } from "react-router-dom";
+import geek1 from "../../assets/images/geek1.png";
+import geek2 from "../../assets/images/geek2.png";
+import geek9 from "../../assets/images/geek9.png";
+import geek4 from "../../assets/images/geek4.png";
+import geek5 from "../../assets/images/geek5.png";
+import geek6 from "../../assets/images/geek6.png";
+import geek7 from "../../assets/images/geek7.png";
+import geek8 from "../../assets/images/geek8.png";
 
 const ElectronicsHero = () => {
-  return (
-    <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-gray-900 to-gray-800 p-4">
-      <div className="flex flex-col md:flex-row items-center max-w-6xl w-full rounded-2xl overflow-hidden bg-gray-800 shadow-2xl">
-    
-        <div className="relative w-full md:w-1/2 p-8 flex flex-col items-center justify-center bg-gray-700">
-          <div className="relative w-full max-w-md">
-            <img
-              src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-              alt="Woman with headphones"
-              className="w-48 h-48 object-cover rounded-full border-4 border-teal-400 mb-4 mx-auto"
-            />
-            <div className="absolute top-10 right-10 bg-teal-500 text-white p-3 rounded-xl shadow-lg">
-              <p>Hi, I'm Priya. Need help with electronics?</p>
-            </div>
-          </div>
-          <div className="grid grid-cols-2 gap-4 mt-6">
-            <img
-              src="https://images.unsplash.com/photo-1598965402089-897ce52e8355?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8c21hcnRwaG9uZXxlbnwwfHwwfHx8MA%3D%3D"
-              alt="Smartphone"
-              className="w-24 h-24 object-cover rounded-lg border-2 border-teal-400"
-            />
-            <img
-              src="https://images.unsplash.com/photo-1484788984921-03950022c9ef?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bGFwdG9wfGVufDB8fDB8fHww"
-              alt="Laptop"
-              className="w-24 h-24 object-cover rounded-lg border-2 border-teal-400"
-            />
-            <img
-              src="https://images.unsplash.com/photo-1587829741301-dc798b83add3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-              alt="Headphones"
-              className="w-24 h-24 object-cover rounded-lg border-2 border-teal-400"
-            />
-            <img
-              src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-              alt="Smartwatch"
-              className="w-24 h-24 object-cover rounded-lg border-2 border-teal-400"
-            />
-          </div>
-        </div>
+  const navigate = useNavigate();
 
-     
-        <div className="w-full md:w-1/2 p-12 flex flex-col justify-center bg-gray-900">
-          <div className="mb-8">
-            <h1 className="text-5xl font-bold text-white mb-4">Tech<span className="text-teal-400">Hero</span></h1>
-            <h2 className="text-3xl font-bold text-white mb-6">Your electronics guide. With AI superpowers.</h2>
-            <p className="text-gray-300 text-lg mb-8">
-              TechHero provides advisors a single, AI-powered workspace with everything at their fingertips to focus on what matters most—helping you find the best electronics for your needs.
-            </p>
-          </div>
-          <button className="bg-teal-500 hover:bg-teal-600 text-white font-bold py-3 px-6 rounded-full shadow-lg transition duration-300 w-fit">
-            Request a Demo
-          </button>
-        </div>
+  const slides = [
+    { src: geek1, title: "Wi-Fi" },
+    { src: geek2, title: "Printers" },
+    { src: geek9, title: "Laptops" },
+    { src: geek4, title: "PC/Mac" },
+    { src: geek5, title: "Tablets" },
+    { src: geek6, title: "iOS/Android" },
+    { src: geek7, title: "Network Setup" },
+    { src: geek8, title: "Antivirus & Security" },
+  ];
+
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % slides.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, [slides.length]);
+
+  return (
+    <section className="relative h-[600px] md:h-[700px] overflow-hidden">
+      
+      <AnimatePresence>
+        <motion.img
+          key={current}
+          src={slides[current].src}
+          alt={slides[current].title}
+          className="absolute inset-0 w-full h-full object-cover object-center"
+          initial={{ opacity: 0, scale: 1.05 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0, scale: 1.05 }}
+          transition={{ duration: 1.2, ease: "easeInOut" }}
+        />
+      </AnimatePresence>
+
+      
+      <motion.div
+        className="absolute top-10 left-10 w-36 h-36 bg-[#00c9b7] rounded-full mix-blend-multiply filter blur-2xl opacity-30"
+        animate={{ y: [0, -20, 0], x: [0, 15, 0] }}
+        transition={{ duration: 6, repeat: Infinity }}
+      />
+      <motion.div
+        className="absolute bottom-10 right-10 w-44 h-44 bg-[#042879] rounded-full mix-blend-multiply filter blur-3xl opacity-30"
+        animate={{ y: [0, 25, 0], x: [0, -20, 0] }}
+        transition={{ duration: 7, repeat: Infinity }}
+      />
+
+      
+      <div className="relative h-full flex flex-col items-center justify-center text-center max-w-3xl mx-auto z-10 px-4">
+        <motion.h1
+          className="text-4xl md:text-6xl font-extrabold text-[#00bba7] mb-4 drop-shadow-lg"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.9 }}
+        >
+          {slides[current].title}
+        </motion.h1>
+
+        <motion.div
+          className="w-24 h-1 bg-gradient-to-r from-[#00c9b7] to-[#042879] rounded-full mb-8"
+          initial={{ scaleX: 0 }}
+          animate={{ scaleX: 1 }}
+          transition={{ delay: 0.6, duration: 0.8 }}
+        />
+
+        <motion.p
+          className="text-lg md:text-2xl text-[#f9fafb] font-medium max-w-2xl mb-8"
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3, duration: 0.7 }}
+        >
+          Your Trusted Partner for Complete Electronics Support and Solutions
+        </motion.p>
+
+        <motion.button
+          onClick={() => navigate("/contact-us")}
+          className="inline-block bg-[#042879] text-white px-8 py-3 rounded-xl text-lg font-bold shadow-lg hover:bg-[#00c9b7] hover:text-[#042879] transition-all duration-300"
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.5, duration: 0.6 }}
+        >
+          Get Tech Support 
+        </motion.button>
       </div>
-    </div>
+    </section>
   );
 };
 
