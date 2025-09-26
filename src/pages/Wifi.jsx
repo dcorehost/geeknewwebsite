@@ -5,6 +5,7 @@ import WIFIService from '../components/WIFIService/WIFIService'
 import OurwifiServices from '../components/OurwifiServices/OurwifiServices'
 import OurWifiProcess from '../components/Ourwifiprocess/Ourwifiprocess'
 import Whychooseuswifi from '../components/Whychooseuswifi/Whychooseuswifi'
+import footer from '../components/Footer/Footer'
 
 
 const Wifi = () => {
@@ -16,6 +17,7 @@ const Wifi = () => {
       <OurwifiServices />
       <OurWifiProcess />
        <Whychooseuswifi />
+       <footer />
     </div>
   )
 }
