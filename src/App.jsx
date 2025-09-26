@@ -1,15 +1,33 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react'
+import { Route, Routes } from 'react-router-dom'
+import About from './pages/About'
+import Antivirus from './pages/Antivirus'
+import IOSAndroid from "./pages/IosAndroid"
+import Laptop from './pages/Laptop'
+import Network from './pages/Network'
+import PcMac from './pages/PcMac'
+import Printer from './pages/Printer'
+import Tablets from './pages/Tablets'
+import Wifi from './pages/Wifi'
+import Home from './pages/Home'
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App = () => {
   return (
-    <>
-      <h1 className='text-[#0f0f0f0]'>Hello Chandan Sharma</h1>
-    </>
+    <div>
+      <Routes>
+         <Route path="/" element={<Home />} />
+         <Route path="/about" element={<About />} />
+         <Route path="/antivirus" element={< Antivirus/>} />
+         <Route path="/iosandroid" element={<IOSAndroid/>} />
+         <Route path="/laptop" element={<Laptop />} />
+         <Route path="/network" element={<Network />} />
+         <Route path="/pcmac" element={<PcMac />} />
+         <Route path="/printer" element={<Printer />} />
+         <Route path="/tablets" element={<Tablets/>} />
+         <Route path="/wifi" element={<Wifi />} />
+         <Route path="/" element={<Home />} />
+      </Routes>
+    </div>
   )
 }
 
