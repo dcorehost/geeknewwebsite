@@ -34,10 +34,10 @@ const WIFIService = () => {
       <div className="relative overflow-hidden mb-16 rounded-3xl p-8 md:p-16">
         <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between">
           <div className="text-center lg:text-left mb-8 lg:mb-0 lg:w-1/2 hero-text" ref={heroTextRef}>
-            <span className="text-lg font-semibold mb-2 block text-[#02C9B7]">
+            <span className="text-lg font-semibold mb-2 block text-[#062B7E]">
               We Care To Serve Best As We Can
             </span>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-4 leading-tight text-gray-900">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-4 leading-tight text-[#02C9B7]">
               Looking for more than just Wi-Fi setup?
             </h1>
             <p className="text-gray-600 font-medium max-w-sm mx-auto lg:mx-0">
