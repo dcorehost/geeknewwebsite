@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Wifi = () => {
+const Header = () => {
   return (
     <div>
-      
+        <h1></h1>
     </div>
   )
 }
 
-export default Wifi
+export default Header

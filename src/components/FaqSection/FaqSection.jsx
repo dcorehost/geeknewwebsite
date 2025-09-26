@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FaChevronDown } from "react-icons/fa";
 
-const FaqSection = ({ title, image, faqs }) => {
+const FaqSection = ({ title, faqs }) => {
   const [openIndexes, setOpenIndexes] = useState([]);
 
   const toggleFAQ = (index) => {
@@ -20,7 +20,7 @@ const FaqSection = ({ title, image, faqs }) => {
           <h2 className="text-3xl md:text-4xl font-bold text-[#062B7E]">
             {title}
           </h2>
-          <div className="w-20 h-1 bg-[#02C9B7] mx-auto mt-3 rounded"></div>
+          <div className="w-80 h-1 bg-[#02C9B7] mx-auto mt-3 rounded"></div>
         </div>
       )}
 
@@ -59,6 +59,7 @@ const FaqSection = ({ title, image, faqs }) => {
                   }`}
                 >
                   <p>{faq.a}</p>
+
                 </div>
               </div>
             );
