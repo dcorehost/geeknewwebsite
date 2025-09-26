@@ -10,13 +10,15 @@ import Printer from './pages/Printer'
 import Tablets from './pages/Tablets'
 import Wifi from './pages/Wifi'
 import Home from './pages/Home'
+import PrivacyPolicy from './pages/PrivacyPolicy'
+
 
 const App = () => {
   return (
     <div>
       <Routes>
          <Route path="/" element={<Home />} />
-         <Route path="/about" element={<About />} />
+         <Route path="/about-us" element={<About />} />
          <Route path="/antivirus" element={< Antivirus/>} />
          <Route path="/iosandroid" element={<IOSAndroid/>} />
          <Route path="/laptop" element={<Laptop />} />
@@ -25,7 +27,8 @@ const App = () => {
          <Route path="/printer" element={<Printer />} />
          <Route path="/tablets" element={<Tablets/>} />
          <Route path="/wifi" element={<Wifi />} />
-         <Route path="/" element={<Home />} />
+         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+         
       </Routes>
     </div>
   )
