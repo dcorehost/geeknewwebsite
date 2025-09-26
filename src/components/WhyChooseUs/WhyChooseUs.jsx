@@ -1,49 +1,76 @@
 import React from "react";
+import { motion } from "framer-motion";
+import { FaLaptopCode, FaRobot } from "react-icons/fa";
 
-const WhyChooseUs = () => {
+export default function InvestPower() {
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100 p-4">
-      <div className="relative flex flex-col md:flex-row items-center max-w-6xl w-full bg-teal-900 rounded-3xl overflow-hidden shadow-xl">
- 
-        <div className="w-full md:w-1/2 p-8 flex justify-center">
-          <div className="relative w-72 h-72 md:w-96 md:h-96">
-            <div className="absolute inset-0 bg-teal-800 rounded-full transform -rotate-12"></div>
-            <img
-              src="https://images.unsplash.com/photo-1579389083078-4e7018379f7e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-              alt="Person with laptop"
-              className="relative z-10 w-full h-full object-cover rounded-full border-8 border-white shadow-lg"
-            />
-          </div>
-        </div>
-
-       
-        <div className="w-full md:w-1/2 p-10 md:p-16 text-white">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Assemble your powers</h2>
-          <p className="text-lg md:text-xl mb-8 leading-relaxed">
-            Choose AI-powered apps from our Hero Store—a collection of native and third-party apps to supercharge the advisor journey.
-            Your go-to toolkit packed with solutions that actually make a difference. Select the ones you want, or integrate your personal favorites.
-          </p>
-          <button className="bg-[#00c9b7] hover:bg-[#00b8a7] text-white font-bold py-3 px-6 rounded-full text-lg transition duration-300">
-            Discover Your Superpowers
-          </button>
-        </div>
-
+    <section className="bg-[#02C9B7]/10 py-16 px-6">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         
-        <div className="absolute bottom-0 left-0 right-0 h-20 bg-gray-100 flex items-end justify-start overflow-hidden">
-          <svg className="h-20 w-48 text-teal-500" viewBox="0 0 200 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M20 10C20 33.3 45 45 80 45C115 45 140 33.3 140 10C140 10 160 10 160 10C160 10 180 10 180 10C180 10 180 30 180 30C180 30 200 30 200 30"
-                  stroke="currentColor"
-                  strokeWidth="3"
-                  strokeLinecap="round"/>
-            <path d="M0 10C0 33.3 25 45 60 45C95 45 120 33.3 120 10C120 10 140 10 140 10"
-                  stroke="currentColor"
-                  strokeWidth="3"
-                  strokeLinecap="round"/>
-          </svg>
-        </div>
-      </div>
-    </div>
-  );
-};
+        {/* LEFT TEXT CONTENT */}
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          <h2 className="text-4xl font-bold text-[#062B7E] mb-4">
+            Why Choose Us
+          </h2>
+          <p className="text-lg text-[#062B7E]/80 mb-8">
+            Innovative electronics and tech solutions designed to empower geeks, hobbyists, and aspiring developers.
+          </p>
 
-export default WhyChooseUs;
+          {/* Point 1 */}
+          <motion.div
+            className="flex items-start mb-6"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2, duration: 0.6 }}
+          >
+            <FaLaptopCode size={36} className="text-[#062B7E] mr-4 mt-1" />
+            <div>
+              <h3 className="text-xl font-semibold text-[#062B7E]">
+                Code & Build
+              </h3>
+              <p className="text-gray-700">
+                Hands-on tutorials and projects to create electronics, software, and embedded systems from scratch.
+              </p>
+            </div>
+          </motion.div>
+
+          {/* Point 2 */}
+          <motion.div
+            className="flex items-start"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4, duration: 0.6 }}
+          >
+            <FaRobot size={36} className="text-[#062B7E] mr-4 mt-1" />
+            <div>
+              <h3 className="text-xl font-semibold text-[#062B7E]">
+                Robotics & AI
+              </h3>
+              <p className="text-gray-700">
+                Explore robotics, AI projects, and automation to bring your electronic ideas to life.
+              </p>
+            </div>
+          </motion.div>
+        </motion.div>
+
+        {/* RIGHT IMAGE */}
+        <motion.div
+          className="rounded-xl shadow-lg overflow-hidden"
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          <img
+            src="https://img.freepik.com/free-photo/man-repairing-circuit-board-laptop_1098-14844.jpg?t=st=1758881515~exp=1758885115~hmac=debf49e54b6301d4c59ec6a0c7c16c08bbd280d0df84ba724b0384ad24b99ad1&w=1480"
+            alt="Tech geek working on electronics"
+            className="w-full h-full object-cover"
+          />
+        </motion.div>
+      </div>
+    </section>
+  );
+}

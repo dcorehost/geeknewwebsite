@@ -9,12 +9,14 @@ import WhyChooseUs from '../components/WhyChooseUs/WhyChooseUs'
 const Home = () => {
   return (
     <div>
-      <Navbar/>
+      <Navbar />
+
       <ElectronicsHero />
       <AboutGeek />
       <OurServicesGeek />
       <WhyChooseUs />
-      <Footer/>
+
+      <Footer />
     </div>
   )
 }

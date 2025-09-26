@@ -35,13 +35,13 @@ const ElectronicsHero = () => {
 
   return (
     <section className="relative h-[600px] md:h-[700px] overflow-hidden">
-      
+      {/* BACKGROUND SLIDES */}
       <AnimatePresence>
         <motion.img
           key={current}
           src={slides[current].src}
           alt={slides[current].title}
-          className="absolute inset-0 w-full h-full object-cover object-center"
+          className="absolute inset-0 w-full h-full object-cover object-center opacity-40"
           initial={{ opacity: 0, scale: 1.05 }}
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 1.05 }}
@@ -61,7 +61,7 @@ const ElectronicsHero = () => {
         transition={{ duration: 7, repeat: Infinity }}
       />
 
-      
+      {/* CONTENT */}
       <div className="relative h-full flex flex-col items-center justify-center text-center max-w-3xl mx-auto z-10 px-4">
         <motion.h1
           className="text-4xl md:text-6xl font-extrabold text-[#00bba7] mb-4 drop-shadow-lg"
@@ -69,7 +69,7 @@ const ElectronicsHero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9 }}
         >
-          {slides[current].title}
+          {slides[current].title} 
         </motion.h1>
 
         <motion.div
@@ -80,22 +80,27 @@ const ElectronicsHero = () => {
         />
 
         <motion.p
-          className="text-lg md:text-2xl text-[#f9fafb] font-medium max-w-2xl mb-8"
+          className="text-lg md:text-2xl text-[#f9fafb] font-medium max-w-2xl mb-8 leading-relaxed"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.7 }}
         >
-          Your Trusted Partner for Complete Electronics Support and Solutions
+          We provide expert support for everything from <span className="text-[#00c9b7] font-semibold">Wi-Fi setup</span> and{" "}
+          <span className="text-[#00c9b7] font-semibold">laptop repairs</span> to{" "}
+          <span className="text-[#00c9b7] font-semibold">network security</span> and{" "}
+          <span className="text-[#00c9b7] font-semibold">device optimization</span>. 
+          Whether it’s your home or office, our skilled team ensures your tech works
+          smoothly, securely, and without interruption — so you can focus on what matters most.
         </motion.p>
 
         <motion.button
           onClick={() => navigate("/contact-us")}
-          className="inline-block bg-[#042879] text-white px-8 py-3 rounded-xl text-lg font-bold shadow-lg hover:bg-[#00c9b7] hover:text-[#042879] transition-all duration-300"
+          className="inline-block bg-[#042879] text-white px-10 py-4 rounded-xl text-lg font-bold shadow-lg hover:bg-[#00c9b7] hover:text-[#042879] transition-all duration-300"
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.5, duration: 0.6 }}
         >
-          Get Tech Support 
+          Talk to a Geek Expert
         </motion.button>
       </div>
     </section>
