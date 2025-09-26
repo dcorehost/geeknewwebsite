@@ -8,11 +8,13 @@ import OurServicesGeek from '../components/OurServicesGeek/OurServicesGeek'
 const Home = () => {
   return (
     <div>
-      <Navbar/>
+      <Navbar />
+
       <ElectronicsHero />
       <AboutGeek />
       <OurServicesGeek />
-      <Footer/>
+
+      <Footer />
     </div>
   )
 }
