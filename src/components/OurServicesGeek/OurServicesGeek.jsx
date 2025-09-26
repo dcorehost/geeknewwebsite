@@ -25,7 +25,6 @@ const OurServicesGeek = () => {
       <div className="absolute top-0 left-1/4 w-72 h-72 bg-[#02C9B7]/20 rounded-full filter blur-3xl animate-pulse"></div>
       <div className="absolute bottom-0 right-1/3 w-80 h-80 bg-[#062B7E]/20 rounded-full filter blur-3xl animate-pulse"></div>
 
-      {/* Header */}
       <div className="relative text-center mb-16 z-10">
         <h2 className="text-4xl md:text-5xl font-extrabold text-#042879 mb-4 drop-shadow-lg">
           Complete Tech Support on All Devices
@@ -35,7 +34,7 @@ const OurServicesGeek = () => {
         </p>
       </div>
 
-      {/* Services Grid */}
+      
       <div className="relative max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 z-10">
         {services.map((service, index) => (
           <div
