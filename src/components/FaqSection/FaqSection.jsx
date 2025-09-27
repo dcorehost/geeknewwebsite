@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FaChevronDown } from "react-icons/fa";
 
-const FaqSection = ({ title, image, faqs }) => {
+const FaqSection = ({ title, faqs }) => {
   const [openIndexes, setOpenIndexes] = useState([]);
 
   const toggleFAQ = (index) => {
@@ -20,7 +20,7 @@ const FaqSection = ({ title, image, faqs }) => {
           <h2 className="text-3xl md:text-4xl font-bold text-[#062B7E]">
             {title}
           </h2>
-          <div className="w-20 h-1 bg-[#02C9B7] mx-auto mt-3 rounded"></div>
+          <div className="w-80 h-1 bg-[#02C9B7] mx-auto mt-3 rounded"></div>
         </div>
       )}
 
@@ -52,13 +52,14 @@ const FaqSection = ({ title, image, faqs }) => {
                     }`}
                   />
                 </button>
-
+                      create reuseable header in this header has a background image and one h1 heading and one paragaraph and one button if for book apponment 
                 <div
                   className={`px-6 pb-4 text-gray-600 transition-[max-height,opacity] duration-300 ease-in-out overflow-hidden ${
                     isOpen ? "max-h-[1000px] opacity-100" : "max-h-0 opacity-0"
                   }`}
                 >
                   <p>{faq.a}</p>
+
                 </div>
               </div>
             );
