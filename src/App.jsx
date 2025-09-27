@@ -21,10 +21,10 @@ const App = () => {
          <Route path="/" element={<Home />} />
          <Route path="/about-us" element={<About />} />
          <Route path="/antivirus" element={< Antivirus/>} />
-         <Route path="/iosandroid" element={<IOSAndroid/>} />
+         <Route path="/ios-android" element={<IOSAndroid/>} />
          <Route path="/laptop" element={<Laptop />} />
          <Route path="/network" element={<Network />} />
-         <Route path="/pcmac" element={<PcMac />} />
+         <Route path="/pc-mac" element={<PcMac />} />
          <Route path="/printer" element={<Printer />} />
          <Route path="/tablets" element={<Tablets/>} />
          <Route path="/wifi" element={<Wifi />} />
