@@ -7,6 +7,8 @@ import { homeFaqData } from '../assets/Data/faq'
 import TechProblemFinder from '../components/TechProblemFinder/TechProblemFinder'
 import GeekServices from '../components/GeekServices/GeekServices'
 import WhyChooseUs from '../components/WhyChooseUs/WhyChooseUs'
+import HowItWorks from '../components/HowItWorks/HowItWorks'
+import PricingPlans from '../components/PricingPlans/PricingPlans'
 
 
 const Home = () => {
@@ -16,6 +18,8 @@ const Home = () => {
       <TechProblemFinder />
       <GeekServices />
       <WhyChooseUs />
+      <HowItWorks />
+      <PricingPlans />
      
       
       

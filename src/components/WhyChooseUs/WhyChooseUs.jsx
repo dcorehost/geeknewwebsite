@@ -6,46 +6,55 @@ const WhyChooseUs = () => {
     {
       icon: <FaUserCheck />,
       title: "Certified & Experienced Technicians",
-      description: "Our team is certified and highly experienced to handle all technical issues efficiently.",
-      color: "bg-blue-100 text-blue-600",
+      description:
+        "Our team is certified and highly experienced to handle all technical issues efficiently.",
+      color: "from-[#02C9B7] to-[#062B7E]",
     },
     {
       icon: <FaLaptopHouse />,
       title: "Doorstep / Remote Support Available",
-      description: "Get support at your convenience, either at your doorstep or remotely.",
-      color: "bg-green-100 text-green-600",
+      description:
+        "Get support at your convenience, either at your doorstep or remotely.",
+      color: "from-[#02C9B7] to-[#062B7E]",
     },
     {
       icon: <FaDollarSign />,
       title: "Affordable & Transparent Pricing",
-      description: "No hidden charges. We offer clear and competitive pricing for all services.",
-      color: "bg-yellow-100 text-yellow-600",
+      description:
+        "No hidden charges. We offer clear and competitive pricing for all services.",
+      color: "from-[#02C9B7] to-[#062B7E]",
     },
     {
       icon: <FaBolt />,
       title: "Fast & Reliable Solutions",
-      description: "We provide quick and dependable solutions to get you back on track.",
-      color: "bg-red-100 text-red-600",
+      description:
+        "We provide quick and dependable solutions to get you back on track.",
+      color: "from-[#02C9B7] to-[#062B7E]",
     },
   ];
 
   return (
-    <section className="py-16 bg-gradient-to-b from-gray-50 to-white">
-      <div className="max-w-6xl mx-auto px-6 text-center">
-        <h2 className="text-4xl font-bold mb-12 text-gray-800">Why Choose Us?</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
+    <section className="py-28 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-6 text-center lg:text-left">
+        <h2 className="text-5xl font-extrabold text-gray-900 mb-6">Why Choose Us?</h2>
+        <p className="text-gray-600 text-lg lg:text-xl mb-16 max-w-3xl">
+          Expert solutions with certified technicians, doorstep support, transparent pricing, and fast, reliable service. We make your experience seamless and stress-free.
+        </p>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {features.map((feature, index) => (
             <div
               key={index}
-              className="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2"
+              className="flex flex-col items-center text-center p-10 rounded-3xl shadow-2xl transform transition-all hover:scale-105 hover:shadow-3xl bg-gradient-to-br"
+              style={{ backgroundImage: `linear-gradient(to bottom right, #02C9B7, #062B7E)` }}
             >
               <div
-                className={`w-16 h-16 flex items-center justify-center rounded-full mb-6 mx-auto ${feature.color}`}
+                className="w-20 h-20 flex items-center justify-center rounded-full mb-6 bg-white text-[#062B7E] text-4xl shadow-lg"
               >
-                {React.cloneElement(feature.icon, { className: "text-2xl" })}
+                {React.cloneElement(feature.icon, { className: "text-3xl" })}
               </div>
-              <h3 className="text-xl font-semibold mb-3 text-gray-800">{feature.title}</h3>
-              <p className="text-gray-600">{feature.description}</p>
+              <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
+              <p className="text-white text-sm">{feature.description}</p>
             </div>
           ))}
         </div>
