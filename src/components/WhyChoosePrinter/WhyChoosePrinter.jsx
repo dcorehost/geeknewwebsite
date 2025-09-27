@@ -131,8 +131,8 @@ const WhyChoosePrinter = () => {
                         Why Choose Us
                     </h2>
                     <div className="w-12 h-1 bg-yellow-500 mx-auto rounded-full mb-4"></div>
-                    <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
-                        Biggest brands in the technology industry recommend our company as a reliable corporate printer service provider.
+                    <p className="mt-6 text-lg text-gray-600 max-w-5xl mx-auto">
+                      Our company is proud to be recommended by some of the biggest names in the technology industry as a reliable and efficient corporate printer service provider. We understand the critical role that high-quality printing solutions play in the fast-paced tech sector, and our tailored services ensure seamless operation and minimal downtim
                     </p>
                 </div>
 
@@ -149,8 +149,6 @@ const WhyChoosePrinter = () => {
                                     className="w-full h-full rounded-full flex items-center justify-center relative shadow-2xl overflow-hidden bg-white" 
                                  
                                 >
-                        
-                                   
                                     <div 
                                         key={slideIndex} 
                                         className="relative z-10 p-8 text-center max-w-xs transition duration-500 animate-fade-in" 
