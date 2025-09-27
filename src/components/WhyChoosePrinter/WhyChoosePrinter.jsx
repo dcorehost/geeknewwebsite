@@ -37,7 +37,6 @@ const WhyChoosePrinter = () => {
     const secondaryDarkBlue = '#062B7E';
     
    
-    const placeholderImageUrl = "../src/assets/images/printer1.png";
 
     const features = [
         { 
