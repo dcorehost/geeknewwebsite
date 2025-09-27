@@ -6,6 +6,7 @@ import FaqSection from '../components/FaqSection/FaqSection'
 import { homeFaqData } from '../assets/Data/faq'
 import TechProblemFinder from '../components/TechProblemFinder/TechProblemFinder'
 import GeekServices from '../components/GeekServices/GeekServices'
+import WhyChooseUs from '../components/WhyChooseUs/WhyChooseUs'
 
 
 const Home = () => {
@@ -14,6 +15,7 @@ const Home = () => {
       <Navbar />
       <TechProblemFinder />
       <GeekServices />
+      <WhyChooseUs />
      
       
       
