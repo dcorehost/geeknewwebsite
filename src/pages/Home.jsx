@@ -1,20 +1,19 @@
 import React from 'react'
 import Navbar from '../components/Navbar/Navbar'
 import Footer from '../components/Footer/Footer'
-import ElectronicsHero from '../components/ElectronicsHero/ElectronicsHero'
-import AboutGeek from '../components/AboutGeek/AboutGeek'
-import OurServicesGeek from '../components/OurServicesGeek/OurServicesGeek'
-import WhyChooseUs from '../components/WhyChooseUs/WhyChooseUs'
+import TechProblemFinder from '../components/TechProblemFinder/TechProblemFinder'
+import GeekServices from '../components/GeekServices/GeekServices'
 
 const Home = () => {
   return (
     <div>
       <Navbar />
+      <TechProblemFinder />
+      <GeekServices />
+  
+      
 
-      <ElectronicsHero />
-      <AboutGeek />
-      <OurServicesGeek />
-      <WhyChooseUs />
+      
 
       <Footer />
     </div>
