@@ -2,7 +2,9 @@ import React from 'react'
 
 const iOSAndroid = () => {
   return (
-    <div>iOSAndroid</div>
+    <div>
+      
+    </div>
   )
 }
 
