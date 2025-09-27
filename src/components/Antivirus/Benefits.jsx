@@ -30,9 +30,9 @@ const benefits = [
 
 const Benefits = () => {
   return (
-    <section className="bg-[#0d2347] py-16 px-6">
+    <section className="py-4 px-6 mb-15">
       <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-3xl font-bold text-white mb-12">Benefits</h2>
+        <h2 className="text-3xl font-bold text-[#0d2347] mb-12">Benefits</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           {benefits.map((benefit, index) => (
             <div

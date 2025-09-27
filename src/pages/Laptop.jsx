@@ -18,6 +18,7 @@ const Laptop = () => {
       <ExtendedWarranty/>
       <Faqs/>
       <ContactBanner/>
+      <Footer/>
     </div>
   )
 }
