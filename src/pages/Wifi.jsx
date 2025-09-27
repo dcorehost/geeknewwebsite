@@ -5,18 +5,21 @@ import OurwifiServices from '../components/OurwifiServices/OurwifiServices'
 import OurWifiProcess from '../components/Ourwifiprocess/Ourwifiprocess'
 import Whychooseuswifi from '../components/Whychooseuswifi/Whychooseuswifi'
 import Footer from '../components/Footer/Footer'
+import Header from '../components/Header/Header'
+import { wifi } from '../assets/Data/headerdata'
 
 
 const Wifi = () => {
   return (
     <div>
-      <Navbar/>
-      <WIFIService/>
+      <Navbar />
+      <Header {...wifi}/>
+      <WIFIService />
       <OurwifiServices />
-       <Whychooseuswifi />
+      <Whychooseuswifi />
       <OurWifiProcess />
-      
-       <Footer />
+
+      <Footer />
     </div>
   )
 }
