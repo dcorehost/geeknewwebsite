@@ -12,6 +12,7 @@ import CTAbutton from '../components/CTAbutton/CTAbutton'
 
 
 
+
 const Tablets = () => {
   return (
     <div>
