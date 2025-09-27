@@ -11,6 +11,7 @@ import Tablets from './pages/Tablets'
 import Wifi from './pages/Wifi'
 import Home from './pages/Home'
 import PrivacyPolicy from './pages/PrivacyPolicy'
+import BookAppointmentPage from './pages/BookAppointmentPage'
 
 
 const App = () => {
@@ -28,6 +29,7 @@ const App = () => {
          <Route path="/tablets" element={<Tablets/>} />
          <Route path="/wifi" element={<Wifi />} />
          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+         <Route path='/book-appointment' element={<BookAppointmentPage />}/>
          
          
       </Routes>

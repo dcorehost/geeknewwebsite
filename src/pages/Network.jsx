@@ -1,19 +1,22 @@
 import React from 'react'
+import Navbar from '../components/Navbar/Navbar'
+import ManageServices from '../components/ManageServices/ManageServices'
+import QuickSupport from '../components/QuickSupport/QuickSupport'
+import ServiceCards from '../components/ServiceCards/ServiceCards'
+import Footer from '../components/Footer/Footer'
 
 
-import BandwidthMonitor from '../components/BandwidthMonito/BandwidthMonito'
-import ApiTeste from '../components/ApiTeste/ApiTeste'
-import NetworkStatus from '../components/NetworkStatus/NetworkStatus'
-import ServiceStatus from '../components/ServiceStatus/ServiceStatus'
 
 const Network = () => {
   return (
     <>
     <div>
-   <NetworkStatus />
-   <BandwidthMonitor />
-    <ApiTeste />
-    <ServiceStatus />
+     <Navbar />
+     <ManageServices />
+     <ServiceCards />
+     <QuickSupport />
+     <Footer />
+     
    </div>
    </>
   )
