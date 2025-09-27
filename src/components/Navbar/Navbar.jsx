@@ -15,25 +15,31 @@ const Navbar = () => {
 
   return (
     <nav className="shadow-lg font-sans">
-
       <div className="h-2" style={{ backgroundColor: "#02C9B7" }}></div>
 
       <div style={{ backgroundColor: "#062B7E" }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-
+            {/* Logo */}
             <div className="flex items-center">
               <a href="/" className="flex-shrink-0">
                 <img src="" alt="Company Logo" className="h-10 w-auto" />
               </a>
             </div>
 
-           
+            {/* Desktop Menu */}
             <div className="hidden md:flex items-center space-x-8 text-white font-medium">
-              <a href="/" className="hover:text-[#02C9B7] transition-colors">Home</a>
-              <a href="/about-us" className="hover:text-[#02C9B7] transition-colors">About Us</a>
+              <a href="/" className="hover:text-[#02C9B7] transition-colors">
+                Home
+              </a>
+              <a
+                href="/about-us"
+                className="hover:text-[#02C9B7] transition-colors"
+              >
+                About Us
+              </a>
 
-              
+              {/* Services Dropdown */}
               <div className="relative">
                 <button
                   onClick={() => toggleDropdown("services")}
@@ -61,23 +67,67 @@ const Navbar = () => {
 
                 {activeDropdown === "services" && (
                   <div className="absolute mt-2 w-56 bg-white text-gray-800 rounded-xl shadow-lg border-t-4 border-[#02C9B7] z-20">
-                    {["WiFi","Laptop","IOS/Android","Antivirus","Network","PC/Mac","Printer","Tablets"].map((item) => (
-                      <a
-                        key={item}
-                        href={`/${item.toLowerCase().replace(/\s+/g, "")}`}
-                        className="block px-4 py-2 hover:bg-[#02C9B7] hover:text-white transition-colors rounded-lg"
-                      >
-                        {item}
-                      </a>
-                    ))}
+                    <a
+                      href="/wifi"
+                      className="block px-4 py-2 hover:bg-[#02C9B7] hover:text-white transition-colors rounded-lg"
+                    >
+                      WiFi
+                    </a>
+                    <a
+                      href="/laptop"
+                      className="block px-4 py-2 hover:bg-[#02C9B7] hover:text-white transition-colors rounded-lg"
+                    >
+                      Laptop
+                    </a>
+                    <a
+                      href="/ios-android"
+                      className="block px-4 py-2 hover:bg-[#02C9B7] hover:text-white transition-colors rounded-lg"
+                    >
+                      IOS/Android
+                    </a>
+                    <a
+                      href="/antivirus"
+                      className="block px-4 py-2 hover:bg-[#02C9B7] hover:text-white transition-colors rounded-lg"
+                    >
+                      Antivirus
+                    </a>
+                    <a
+                      href="/network"
+                      className="block px-4 py-2 hover:bg-[#02C9B7] hover:text-white transition-colors rounded-lg"
+                    >
+                      Network
+                    </a>
+                    <a
+                      href="/pc-mac"
+                      className="block px-4 py-2 hover:bg-[#02C9B7] hover:text-white transition-colors rounded-lg"
+                    >
+                      PC/Mac
+                    </a>
+                    <a
+                      href="/printer"
+                      className="block px-4 py-2 hover:bg-[#02C9B7] hover:text-white transition-colors rounded-lg"
+                    >
+                      Printer
+                    </a>
+                    <a
+                      href="/tablets"
+                      className="block px-4 py-2 hover:bg-[#02C9B7] hover:text-white transition-colors rounded-lg"
+                    >
+                      Tablets
+                    </a>
                   </div>
                 )}
               </div>
-                
-              <a href="/contact-use" className="hover:text-[#02C9B7] transition-colors">Contact</a>
+
+              <a
+                href="/contact-us"
+                className="hover:text-[#02C9B7] transition-colors"
+              >
+                Contact
+              </a>
             </div>
 
-            
+            {/* Desktop Button */}
             <div className="hidden md:flex">
               <a
                 href="/book-appointment"
@@ -97,12 +147,32 @@ const Navbar = () => {
                 className="p-2 rounded-md text-white hover:bg-[#02C9B7] transition"
               >
                 {!isMobileMenuOpen ? (
-                  <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"/>
+                  <svg
+                    className="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M4 6h16M4 12h16M4 18h16"
+                    />
                   </svg>
                 ) : (
-                  <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"/>
+                  <svg
+                    className="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M6 18L18 6M6 6l12 12"
+                    />
                   </svg>
                 )}
               </button>
@@ -111,8 +181,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      
-
+      {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div
           className="md:hidden text-white font-medium"
@@ -121,11 +190,26 @@ const Navbar = () => {
           }}
         >
           <div className="px-4 py-3 space-y-2">
-            <a href="/" className="block px-3 py-2 rounded hover:bg-[#062B7E] transition">Home</a>
-            <a href="/about-us" className="block px-3 py-2 rounded hover:bg-[#062B7E] transition">About Us</a>
-            <a href="/contact-us" className="block px-3 py-2 rounded hover:bg-[#062B7E] transition">Contact</a>
+            <a
+              href="/"
+              className="block px-3 py-2 rounded hover:bg-[#062B7E] transition"
+            >
+              Home
+            </a>
+            <a
+              href="/about-us"
+              className="block px-3 py-2 rounded hover:bg-[#062B7E] transition"
+            >
+              About Us
+            </a>
+            <a
+              href="/contact-us"
+              className="block px-3 py-2 rounded hover:bg-[#062B7E] transition"
+            >
+              Contact
+            </a>
 
-            
+            {/* Mobile Services */}
             <button
               onClick={() => toggleDropdown("services")}
               className="flex justify-between items-center w-full px-3 py-2 rounded hover:bg-[#062B7E] transition"
@@ -152,19 +236,57 @@ const Navbar = () => {
 
             {activeDropdown === "services" && (
               <div className="mt-1 ml-4 bg-white text-gray-800 rounded-lg shadow-lg border-t-4 border-[#02C9B7]">
-                {["WiFi","Laptop","IOS/Android","Antivirus","Network","PC/Mac","Printer","Tablets"].map((item) => (
-                  <a
-                    key={item}
-                    href={`/${item.toLowerCase().replace(/\s+/g, "")}`}
-                    className="block px-4 py-2 hover:bg-[#02C9B7] hover:text-white transition-colors rounded"
-                  >
-                    {item}
-                  </a>
-                ))}
+                <a
+                  href="/wifi"
+                  className="block px-4 py-2 hover:bg-[#02C9B7] hover:text-white transition-colors rounded"
+                >
+                  WiFi
+                </a>
+                <a
+                  href="/laptop"
+                  className="block px-4 py-2 hover:bg-[#02C9B7] hover:text-white transition-colors rounded"
+                >
+                  Laptop
+                </a>
+                <a
+                  href="/iosandroid"
+                  className="block px-4 py-2 hover:bg-[#02C9B7] hover:text-white transition-colors rounded"
+                >
+                  IOS/Android
+                </a>
+                <a
+                  href="/antivirus"
+                  className="block px-4 py-2 hover:bg-[#02C9B7] hover:text-white transition-colors rounded"
+                >
+                  Antivirus
+                </a>
+                <a
+                  href="/network"
+                  className="block px-4 py-2 hover:bg-[#02C9B7] hover:text-white transition-colors rounded"
+                >
+                  Network
+                </a>
+                <a
+                  href="/pc-mac"
+                  className="block px-4 py-2 hover:bg-[#02C9B7] hover:text-white transition-colors rounded"
+                >
+                  PC/Mac
+                </a>
+                <a
+                  href="/printer"
+                  className="block px-4 py-2 hover:bg-[#02C9B7] hover:text-white transition-colors rounded"
+                >
+                  Printer
+                </a>
+                <a
+                  href="/tablets"
+                  className="block px-4 py-2 hover:bg-[#02C9B7] hover:text-white transition-colors rounded"
+                >
+                  Tablets
+                </a>
               </div>
             )}
 
-            
             <a
               href="/book-appointment"
               className="block mt-3 px-3 py-2 rounded-full text-center font-semibold text-white shadow-md hover:shadow-lg transition"
@@ -172,7 +294,7 @@ const Navbar = () => {
                 background: "linear-gradient(135deg, #02C9B7, #028f7e)",
               }}
             >
-              Book Appointment 
+              Book Appointment
             </a>
           </div>
         </div>

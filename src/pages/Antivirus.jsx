@@ -7,6 +7,9 @@ import Benefits from '../components/Antivirus/Benefits'
 import WhySecuritySuite from '../components/Antivirus/WhySecuritySuite'
 import Header from '../components/Header/Header'
 import { antivirus } from '../assets/Data/headerdata'
+import Footer from '../components/Footer/Footer'
+import FaqSection from '../components/FaqSection/FaqSection'
+import { antivirusServiceFaqData } from '../assets/Data/faq'
 const Antivirus = () => {
   return (
     <div>
@@ -17,6 +20,7 @@ const Antivirus = () => {
       <MalwareDefense/>
       <Benefits/>
       {/* <WhySecuritySuite/> */}
+      <FaqSection {...antivirusServiceFaqData} />
       <Footer/>
     </div>
   )
