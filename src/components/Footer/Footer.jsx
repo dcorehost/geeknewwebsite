@@ -80,7 +80,7 @@ const Footer = () => {
         <p>© {new Date().getFullYear()}  Geek <span className="text-[#02C9B7]">Care</span> All rights reserved.</p>
         <div className="space-x-6">
           <a href="/terms" className="hover:text-[#02C9B7]">Terms & Conditions</a>
-          <a href="/privacy" className="hover:text-[#02C9B7]">Privacy Policy</a>
+          <a href="/privacy-policy" className="hover:text-[#02C9B7]">Privacy Policy</a>
         </div>
       </div>
     </footer>
