@@ -16,7 +16,8 @@ const Antivirus = () => {
       <AntivirusIntro/>
       <MalwareDefense/>
       <Benefits/>
-      <WhySecuritySuite/>
+      {/* <WhySecuritySuite/> */}
+      <Footer/>
     </div>
   )
 }
