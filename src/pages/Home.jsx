@@ -7,11 +7,12 @@ import OurServicesGeek from '../components/OurServicesGeek/OurServicesGeek'
 import FaqSection from '../components/FaqSection/FaqSection'
 import { homeFaqData } from '../assets/Data/faq'
 
+
 const Home = () => {
   return (
     <div>
       <Navbar />
-
+     
       <ElectronicsHero />
       <AboutGeek />
       <OurServicesGeek />
