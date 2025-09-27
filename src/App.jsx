@@ -10,6 +10,8 @@ import Printer from './pages/Printer'
 import Tablets from './pages/Tablets'
 import Wifi from './pages/Wifi'
 import Home from './pages/Home'
+import ContactUs from './pages/ContactUs'
+
 
 const App = () => {
   return (
@@ -25,6 +27,7 @@ const App = () => {
          <Route path="/printer" element={<Printer />} />
          <Route path="/tablets" element={<Tablets/>} />
          <Route path="/wifi" element={<Wifi />} />
+         <Route path="/contact-use" element={<ContactUs/>}/>
          <Route path="/" element={<Home />} />
       </Routes>
     </div>

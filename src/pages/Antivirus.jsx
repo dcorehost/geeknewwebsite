@@ -5,6 +5,7 @@ import AntivirusIntro from '../components/Antivirus/AntivirusIntro'
 import MalwareDefense from '../components/Antivirus/MalwareDefense'
 import Benefits from '../components/Antivirus/Benefits'
 import WhySecuritySuite from '../components/Antivirus/WhySecuritySuite'
+import Footer from '../components/Footer/Footer'
 const Antivirus = () => {
   return (
     <div>
@@ -13,7 +14,8 @@ const Antivirus = () => {
       <AntivirusIntro/>
       <MalwareDefense/>
       <Benefits/>
-      <WhySecuritySuite/>
+      {/* <WhySecuritySuite/> */}
+      <Footer/>
     </div>
   )
 }
