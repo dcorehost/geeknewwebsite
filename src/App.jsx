@@ -10,6 +10,7 @@ import Printer from './pages/Printer'
 import Tablets from './pages/Tablets'
 import Wifi from './pages/Wifi'
 import Home from './pages/Home'
+import ContactUs from './pages/ContactUs'
 import PrivacyPolicy from './pages/PrivacyPolicy'
 import BookAppointmentPage from './pages/BookAppointmentPage'
 

@@ -74,7 +74,7 @@ const Navbar = () => {
                 )}
               </div>
                 
-              <a href="/contact-us" className="hover:text-[#02C9B7] transition-colors">Contact</a>
+              <a href="/contact-use" className="hover:text-[#02C9B7] transition-colors">Contact</a>
             </div>
 
             
