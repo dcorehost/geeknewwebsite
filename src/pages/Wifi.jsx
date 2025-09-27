@@ -7,6 +7,8 @@ import Whychooseuswifi from '../components/Whychooseuswifi/Whychooseuswifi'
 import Footer from '../components/Footer/Footer'
 import Header from '../components/Header/Header'
 import { wifi } from '../assets/Data/headerdata'
+import FaqSection from '../components/FaqSection/FaqSection'
+import { wifiServiceFaqData } from '../assets/Data/faq'
 
 
 const Wifi = () => {
@@ -18,7 +20,7 @@ const Wifi = () => {
       <OurwifiServices />
       <Whychooseuswifi />
       <OurWifiProcess />
-
+      <FaqSection {...wifiServiceFaqData} />
       <Footer />
     </div>
   )
