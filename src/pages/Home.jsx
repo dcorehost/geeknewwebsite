@@ -22,7 +22,6 @@ const Home = () => {
       <PricingPlans />
      
       
-      
       <FaqSection {...homeFaqData} />
       <Footer />
     </div>

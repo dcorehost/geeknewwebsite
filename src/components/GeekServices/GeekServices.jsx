@@ -33,12 +33,12 @@ const services = [
   {
     title: "Tablets",
     description: "Setup, support, and troubleshooting for tablets of all brands.",
-    image: geek5,
+    image: geek6,
   },
   {
     title: "iOS/Android",
     description: "Mobile device support for iPhones, iPads, and Android devices.",
-    image: geek6,
+    image: geek5,
   },
   {
     title: "Network Setup",
@@ -52,36 +52,30 @@ const services = [
   },
 ];
 
-const createRowItems = (services) => {
-  const row = [];
-  services.forEach((service) => {
-    row.push({ type: "text", ...service });
-    row.push({ type: "image", ...service });
-  });
-  return row;
-};
-
 const GeekServices = () => {
-  const firstRow = createRowItems(services);  
+  // Create a row with alternating image and text
+  const createRowItems = (services) => {
+    const row = [];
+    services.forEach((service) => {
+      row.push({ type: "image", ...service });
+      row.push({ type: "text", ...service });
+    });
+    return row;
+  };
 
+  const firstRow = createRowItems(services);
   const row1 = firstRow.slice(0, 8);
   const row2 = firstRow.slice(8, 16);
 
   const renderRow = (row) => (
-    <div className="flex w-full">
+    <div className="flex w-full flex-wrap">
       {row.map((item, index) => (
-        <div
-          key={index}
-          className="flex-1 border border-gray-200 box-border aspect-square"
-        >
+        <div key={index} className="w-1/4 p-4 border border-gray-200 box-border aspect-square">
           {item.type === "text" ? (
-            <div className="p-6 h-full flex flex-col justify-center text-center">
-              <h2 className="text-2xl font-bold mb-2">{item.title}</h2>
+            <div className="p-6 h-full flex flex-col justify-center text-center bg-gray-50">
+              <h2 className="text-xl font-bold mb-2">{item.title}</h2>
               <p className="text-gray-700 mb-4">{item.description}</p>
-              <a
-                href="#"
-                className="text-blue-600 hover:underline font-medium"
-              >
+              <a href="#" className="text-blue-600 hover:underline font-medium">
                 Read More
               </a>
             </div>
