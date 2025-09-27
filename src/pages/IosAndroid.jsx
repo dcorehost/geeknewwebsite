@@ -9,7 +9,7 @@ const iOSAndroid = () => {
     <div>
        <Navbar />
        <Header {...mobile} />
-       <
+       
        <Footer />
     </div>
   )
